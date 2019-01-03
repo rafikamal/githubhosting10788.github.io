@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Halo</title>
+</head>
+<body>
+    <p id="intro">Hello DOM!!! Muhammad Rafi Kamal</p>
+    <p>Tugas DOM A11.2017.10788</p>
+    
+    <form name="form1"></form>
+    <form name="form2"></form>
+    <form>
+        Provinsi : 
+        <select name="provinsi" onChange="tampilkanKota(this.value);">
+            <option value=""></option>
+            <option value="Jabar">Jawa Barat</option>
+            <option value="Jateng">Jawa Tengah</option>
+        </select>
+        <div id="kota"></div>
+        <div style="float: left;">
+            <p>Pilih</p>
+            <select id="buah" size="5" onchange="pilih()">
+                <option value="A">Apel</option>
+                <option value="M">Mangga</option>
+                <option value="N">Nanas</option>
+                <option value="S">Semangka</option>
+            </select>
+        </div>
+        <div style="float: left; margin-left: 20px;">
+            <p>Pilihan Anda</p>
+            <select id="pilihan" size="5"></select>
+        </div>
+    </form>
+    
+    <p>
+    <div id="pesan"></div>
+    <button onclick="tampilkanPesan()">Pesan</button>
+    
+    <div id="pesan2"><h1>Selamat Datang</h1></div>
+    <button id="buttonWarna" onclick="gantiWarna()">Hijau</button>
+    <hr>
+    </p>
+    <script type="text/javascript">
+        function pilih(){
+            var buah = document.getElementById("buah");
+            var pilihan = document.getElementById("pilihan");
+            var option = document.createElement("option");
+
+            option.text=buah.options[buah.selectedIndex].text;
+            try{
+                pilihan.add(option, null);
+            }
+            catch(ex){
+                pilihan.add(option);
+            }
+        }    
+
+        function gantiWarna(){
+            var pesan = document.getElementById('pesan2');
+            var button = document.getElementById('buttonWarna');
+            if(button.innerHTML=="Hijau"){
+                pesan.style.cssText = "background-color: green;";
+                button.innerHTML = "Merah";
+            }
+            else if(button.innerHTML=="Merah"){
+                pesan.style.cssText = "background-color: red;";
+                button.innerHTML = "Hijau";
+            }
+        }    
+
+        function tampilkanKota(provinsi){
+            var kota ="";
+            switch(provinsi){
+                case "Jabar": {
+                                kota = "<ul><li>Bandung</li><li>Bogor</li></ul>"
+                            }break;
+                case "Jateng": {
+                                kota = "<ul><li>Semarang</li><li>Salatiga</li></ul>"
+                            }break;
+                default: kota="";
+            }
+            document.getElementById("kota").innerHTML=kota;
+        }
+
+        function tampilkanPesan(){
+            var pesan = document.getElementById("pesan");
+            pesan.innerHTML = "<b>Selamat datang</b>";
+        }
+
+        //getElementById
+        x=document.getElementById("intro");
+        document.write("<p>Kalimat intronya adalah "+x.innerHTML+"</p>");
+
+        //getElementsByTagName
+        y=document.getElementsByTagName("p");
+        document.write("Isi tag p ke-2 adalah "+y[1].innerHTML);
+        
+        //document object
+        document.write("<br>Jumlah form = "+document.forms.length);
+        document.write("<br>Nama form ke-1 = "+document.forms[0].name);
+        
+        document.title="DOM pertama ku";
+    
+    </script>
+</body>
+</html>
