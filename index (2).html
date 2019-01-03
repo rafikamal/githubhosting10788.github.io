@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Membuat layout WEB responsive sederhana HTML dan CSS</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="header">
+  <h2><div class="img"><img src="banner.jpg" height="200" width="100%"></div></h2>
+</div>
+
+<div class="nav">
+  <a href="#tabel">Tabel</a>
+  <a href="#form1">Form 1</a>
+  <a href="#form2">Form 2</a>  
+</div>
+
+<div class="row">
+  <div class="content">
+    <div class="card">
+      <h2>CSS Layout</h2>
+      <h5>Selasa, 10 Agustus 2018</h5>
+      <div class="img" style="height:205px;"><img src="banner.jpg" height="195"></div>     
+      <p>Deskripsi deskripsi</p>
+    </div>    
+  </div>
+  <div class="sidebar">
+    <div class="widget">
+      <h2>Widget 1</h2>
+    </div>
+    <div class="widget">
+      <h2>Widget 2</h2>
+    </div>
+    <div class="widget">
+      <h2>Widget 3</h2>
+    </div>
+    <div class="widget">
+      <h2>Widget 4</h2>
+    </div>
+  </div>
+</div>
+
+<section id="tabel">
+<h2 align="center">Tabel</h2>
+<table cellspacing='0' class="center">
+		<thead>
+			<tr>
+				<th>Nama Anggota</th>
+				<th>Alamat</th>
+				<th>Pekerjaan</th>
+				<th>Usia</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Iko</td>
+				<td>Semarang Selatan</td>
+				<td>Graphic Designer</td>
+				<td>25</td>
+			</tr>
+			<tr>
+				<td>Bedi</td>
+				<td>Batang</td>
+				<td>Programming Developer</td>
+				<td>27</td>
+			</tr>
+			<tr>
+				<td>Caca</td>
+				<td>Bengkulu</td>
+				<td>3D Programmer</td>
+				<td>30</td>
+			</tr>
+			<tr>
+				<td>Dermo</td>
+				<td>Batam</td>
+				<td>Teknisi Listrik</td>
+				<td>40</td>
+			</tr>
+		</tbody>
+	</table>
+</section>
+	
+<section id="form1">
+<h2 align="center">Form 1</h2>
+<form class="form1" action="">
+			<label for="firstName" class="first-name">First Name</label>
+			<input id="firstName" type="text">
+
+			<label for="lastName" class="last-name">Last Name</label>
+			<input id="lastName" type="text">
+
+			<label for="job">Job</label>
+			<input id="job" type="text">
+
+			<label for="age">Age</label>
+			<input id="age" type="text">
+
+			<label for="email">Email</label>
+			<input id="email" type="email">
+
+			<button>Submit</button>
+</form>
+</section>
+
+<section id="form2">
+<h2 align="center">Form2</h2>
+<div class="contain">
+
+  <div class="wrapper">
+    <div class="contacts">
+      <h3>Our contacts</h3>
+
+      <ul>
+        <li>San Joe St.</li>
+        <li>00-1212121-11</li>
+        <li>mail@mail.com</li>
+      </ul>
+    </div>
+
+    <div class="form">
+      <h3>Send us a message</h3>
+      <form action="">
+        <p>
+          <label for="">Your name</label>
+          <input type="text">
+        </p>
+        <p>
+          <label for="">Skype</label>
+          <input type="text">
+        </p>
+        <p>
+          <label for="">Email Address</label>
+          <input type="text">
+        </p>
+        <p>
+          <label for="">Topic</label>
+          <input type="text">
+        </p>
+        <p>
+          <label for="">Write your message</label>
+          <textarea name="" id="" cols="30" rows="7"></textarea>
+        </p>
+        <p>
+          <button>Send</button>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="row">
+	<div class="footer">
+  		<h2>Footer 1</h2>  		
+	</div>
+	<div class="footer">
+  		<h2>Footer 2</h2>
+	</div>
+	<div class="footer">
+  		<h2>Footer 3</h2>
+	</div>
+	<div class="footer">
+  		<h2>Footer 4</h2>
+	</div>
+</div>
+
+</body>
+</html>
